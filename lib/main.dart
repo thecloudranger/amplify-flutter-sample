@@ -3,11 +3,12 @@ import 'login_page.dart';
 import 'sign_up_page.dart';
 import 'auth_service.dart';
 import 'verification_page.dart';
-import 'image_gallery_page.dart';
+import 'home_page.dart';
 
 import 'package:amplify_flutter/amplify.dart';
 import 'amplifyconfiguration.dart';
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
+import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 
 void main() {
   runApp(MyApp());
@@ -70,7 +71,7 @@ class _MyAppState extends State<MyApp> {
                                 _authService.verifyCode)),
                   if (snapshot.data.authFlowStatus == AuthFlowStatus.session)
                     MaterialPage(
-                        child: GalleryView(shouldLogOut: _authService.logOut))
+                        child: HomePage(shouldLogOut: _authService.logOut))
                 ],
                 onPopPage: (route, result) => route.didPop(result),
               );
@@ -87,7 +88,9 @@ class _MyAppState extends State<MyApp> {
 
   void _configureAmplify() async {
     AmplifyAuthCognito authPlugin = AmplifyAuthCognito();
-    Amplify.addPlugins([authPlugin]);
+    AmplifyStorageS3 storage = AmplifyStorageS3();
+
+    Amplify.addPlugins([authPlugin, storage]);
     try {
       await Amplify.configure(amplifyconfig);
       print(' Successfully configured Amplify 🎉');

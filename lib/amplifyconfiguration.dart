@@ -28,7 +28,22 @@ const amplifyconfig = ''' {
                     "Default": {
                         "authenticationFlowType": "USER_SRP_AUTH"
                     }
+                },
+                "S3TransferUtility": {
+                    "Default": {
+                        "Bucket": "flutter-workshpop-test-5767593132348-dev",
+                        "Region": "eu-west-1"
+                    }
                 }
+            }
+        }
+    },
+    "storage": {
+        "plugins": {
+            "awsS3StoragePlugin": {
+                "bucket": "flutter-workshpop-test-5767593132348-dev",
+                "region": "eu-west-1",
+                "defaultAccessLevel": "guest"
             }
         }
     }
