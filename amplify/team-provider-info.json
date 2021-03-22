@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-flutterworkshopapp-dev-132348-authRole",
+      "UnauthRoleArn": "arn:aws:iam::482643140520:role/amplify-flutterworkshopapp-dev-132348-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::482643140520:role/amplify-flutterworkshopapp-dev-132348-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-flutterworkshopapp-dev-132348-deployment",
+      "UnauthRoleName": "amplify-flutterworkshopapp-dev-132348-unauthRole",
+      "StackName": "amplify-flutterworkshopapp-dev-132348",
+      "StackId": "arn:aws:cloudformation:eu-west-1:482643140520:stack/amplify-flutterworkshopapp-dev-132348/caf40d60-8ace-11eb-8c72-06a5025a7de9",
+      "AmplifyAppId": "d99r0mdmi39ie"
+    },
+    "categories": {
+      "auth": {
+        "flutterworkshopapp73b82d2c": {}
+      }
+    }
+  }
+}

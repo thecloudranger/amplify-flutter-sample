@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "flutterworkshopapp73b82d2c": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
